@@ -69,15 +69,18 @@ def chosen_one():
         "\nYou approach the empty nest and attempt the grab the egg when you "
         "hear the roar of the dragon. Its returning to the nest.")
     print("What will you do?\n1.Confront the Dragon. \n2. Hide in the nest.")
+    
     chosen_loop = True
     while chosen_loop:
         command = input("> ")
+        
         # Goes to the "Dead" ending
         if command == "1":
             chosen_loop = False
             dead_ending()
+            
+        # Goes to the "Winner" ending
         elif command == "2":
-            # Goes to the "Winner" ending
             chosen_loop = False
             winner_ending()
         else:
@@ -126,12 +129,14 @@ def enter_the_city():
     city_loop = True
     while city_loop:
         command = input("> ")
+
         # Goes to the "Chosen one" route.
         if command == "1":
             city_loop = False
             chosen_one()
+            
+        # Goes to the "Scholar" ending
         elif command == "2":
-            # Goes to the "Scholar" ending
             city_loop = False
             scholar_ending()
         else:
@@ -224,10 +229,12 @@ def jester_path():
     jester_loop = True
     while jester_loop:
         command = input("> ")
+
         if command == "1":
             # Goes to the "Jester" ending
             jester_loop = False
             jester_ending()
+
         elif command == "2":
             # Goes to the "Tavern" route
             jester_loop = False
@@ -301,6 +308,7 @@ def optional_puzzle():
         elif int(guess) < answer:
             print("Your guess was lower than the number.")
         guess_amount += 1
+
     if guess_amount < 5:
         print("\nCongrats you won.\n")
     elif guess_amount:
@@ -327,6 +335,7 @@ the "Enter the City scene, and a failure bringing the player to the
             " into the city without solving the puzzle.")
         print("enter the city")
         enter_the_city()
+        
     else:
         print(
             'The gatekeeper gives you the following riddle:\n\n"This has a'
@@ -399,6 +408,7 @@ def cave_path():
             cave_loop = False
             has_amulet = False
             print("\nYou decide not to take the amulet.\n")
+            
         else:
             print('Invalid response, type "1" or "2"')
             continue
