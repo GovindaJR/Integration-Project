@@ -1,8 +1,7 @@
-# Govinda Ramrattan
-# My Integration Project
-
 """Project: A text based story oriented RPG Game with choices that result in
 different endings. Titled: "SECRET OF THE GOLDEN EGG" """
+
+__author__ = "Govinda Ramrattan"
 
 import random
 
